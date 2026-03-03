@@ -12,7 +12,7 @@ Abnormal working hours
 Behavioral anomalies using ML
 
 # Project Architecture
-'''
+
 Raw Dataset (CERT r4.2)                                                                                                                                            
         ↓                                                                                                                                                          
 load_data.py
@@ -26,9 +26,9 @@ train_model.py
 detect.py
         ↓
 Streamlit Dashboard (dashboard.py)
-'''
+
 # Project Structure
-'''
+
 .
 ├── load_data.py          # Convert CSV logs to Parquet format
 ├── preprocess.py         # Clean & normalize raw data
@@ -46,9 +46,7 @@ Streamlit Dashboard (dashboard.py)
 │   ├── alerts.csv
 │   └── alerts.json
 
-'''
 # Technologies Used
-'''
 Python
 Pandas
 NumPy
@@ -59,9 +57,9 @@ Plotly
 PyArrow
 Machine Learning 
 Artificial intelligence
-'''
+
 # Machine Learning Approach
-'''
+
 The system uses Isolation Forest for anomaly detection
 Features Used:
 total_bytes
@@ -69,7 +67,6 @@ avg_hour
 sftp_count
 remote_vm_count
 unknown_loc_count
-'''
 Model:
 200 estimators
 1% contamination
@@ -90,7 +87,7 @@ outputs/alerts.csv
 outputs/alerts.json
 
 # Interactive Dashboard
-'''
+
 Built using Streamlit + Plotly
 Dashboard Features:
 Filter by user
@@ -100,10 +97,10 @@ Alerts over time visualization
 Top risky users
 Scatter plot (data volume vs anomaly score)
 CSV download option
-'''
+
 Run Dashboard:
 streamlit run dashboard.py
-'''
+
 # How to Run the Project
 
 1️⃣ Install Dependencies
@@ -144,7 +141,6 @@ outputs/alerts.json
 7️⃣ Launch Monitoring Dashboard
 streamlit run dashboard.py
 
-'''
 
 
 ''
