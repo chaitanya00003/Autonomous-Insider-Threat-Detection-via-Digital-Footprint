@@ -12,8 +12,8 @@ Abnormal working hours
 Behavioral anomalies using ML
 
 # Project Architecture
-Raw Dataset (CERT r4.2)
-        ↓
+Raw Dataset (CERT r4.2)                                                                                                                                            
+        ↓                                                                                                                                                          
 load_data.py
         ↓
 preprocess.py
