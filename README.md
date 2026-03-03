@@ -12,7 +12,7 @@ Abnormal working hours
 Behavioral anomalies using ML
 
 # Project Architecture
-
+```bash
 Raw Dataset (CERT r4.2)                                                                                                                                            
         ↓                                                                                                                                                          
 load_data.py
@@ -26,9 +26,9 @@ train_model.py
 detect.py
         ↓
 Streamlit Dashboard (dashboard.py)
-
+```
 # Project Structure
-
+```bash
 .
 ├── load_data.py          # Convert CSV logs to Parquet format
 ├── preprocess.py         # Clean & normalize raw data
@@ -45,8 +45,9 @@ Streamlit Dashboard (dashboard.py)
 ├── outputs/
 │   ├── alerts.csv
 │   └── alerts.json
-
+```
 # Technologies Used
+```
 Python
 Pandas
 NumPy
@@ -57,10 +58,11 @@ Plotly
 PyArrow
 Machine Learning 
 Artificial intelligence
-
+```
 # Machine Learning Approach
 
 The system uses Isolation Forest for anomaly detection
+```
 Features Used:
 total_bytes
 avg_hour
@@ -72,59 +74,63 @@ Model:
 1% contamination
 StandardScaler normalization
 Threshold = 99th percentile anomaly score
-
+```
 # Detection Logic
 Alerts are generated if:
 Anomaly Score > Learned Threshold
 
 Rule-Based Condition:
-User's total_bytes > 95th percentile
+User's total_bytes > 95th percentile                                                                                                                               
 Remote VM + Unknown Location + SFTP activity combinatio
 
 # Detection logic implemented in:
 Alerts are saved as:
+```
 outputs/alerts.csv
 outputs/alerts.json
-
+```
 # Interactive Dashboard
 
-Built using Streamlit + Plotly
-Dashboard Features:
-Filter by user
-Filter by minimum ML score
-Rule-based only filter
-Alerts over time visualization
-Top risky users
-Scatter plot (data volume vs anomaly score)
-CSV download option
-
-Run Dashboard:
-streamlit run dashboard.py
+Built using Streamlit + Plotly                                                                                                                                    
+Dashboard Features:                                                                                                                                               
+Filter by user                                                                                                                                                    
+Filter by minimum ML score                                                                                                                                        
+Rule-based only filter                                                                                                                                        
+Alerts over time visualization                                                                                                                                
+Top risky users                                                                                                                                             
+Scatter plot (data volume vs anomaly score)                                                                                                                        
+CSV download option                                                                                                                                
 
 # How to Run the Project
 
 1️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
-
+```
 2️⃣ Load Raw Dataset
+```bash
 python load_data.py
-
+```
 Converts CSV logs into parquet format.
 
 3️⃣ Preprocess Data
+```
 python preprocess.py
-
+```
 Standardizes column names
 Parses timestamps
 Cleans object columns
 
 4️⃣ Feature Engineering
+```
 python features.py
-
+```
 Generates behavioral user-day features.
 
 5️⃣ Train Model
+```
 python train_model.py
+```
 
 Creates:
 models/iso_model.joblib
@@ -132,15 +138,16 @@ models/scaler.joblib
 models/threshold.json
 
 6️⃣ Generate Alerts
+```
 python detect.py
-
+```
 Creates:
 outputs/alerts.csv
 outputs/alerts.json
 
 7️⃣ Launch Monitoring Dashboard
+```
 streamlit run dashboard.py
+```
 
 
-
-''
